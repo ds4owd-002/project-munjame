@@ -1,0 +1,22 @@
+---
+title: "my project"
+author: "Mundrugo Sunday James"
+format: html
+editor: visual
+---
+
+## Project Description
+
+The goal of the project is to analyse the characteristics of faecal sludge received at the treatment plant from different sources for the month of april
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+read_csv(here::here("data/raw/influent-data-2025.csv"))
+```
