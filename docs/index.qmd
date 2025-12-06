@@ -1,5 +1,5 @@
 ---
-title: "my project"
+title: "My Capstone Project"
 author: "Mundrugo Sunday James"
 format: html
 editor: visual
@@ -19,4 +19,13 @@ library(tidyverse)
 
 ```{r}
 read_csv(here::here("data/raw/influent-data-2025.csv"))
+```
+```{r}
+processed_data <- raw_data |>
+  select(`Sample description`, `Total Solids (g/l or g/Kg)`, `Sludge Volume (ml/L)`, `Ammonium mg/l)`,`Temperature (oC)`, `COD mg/l)`) |>
+  filter(!is.na(`COD mg/l)`) & !is.na(`Total Solids (g/l or g/Kg)`) & !is.na(`Sludge Volume (ml/L)`) & !is.na(`Temperature (oC)`) & !is.na(`Ammonium mg/l)`)) |>
+  rename(influent_source = `Sample description`, ts = `Total Solids (g/l or g/Kg)`, ammonium = `Ammonium mg/l)`,temperature = `Temperature (oC)`, COD = `COD mg/l)` )
+
+write_csv(processed_data,
+          here::here("data/processed/processed_influent_data.csv"))
 ```
