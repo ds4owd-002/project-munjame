@@ -1,12 +1,14 @@
----
+ ---
 title: "My Capstone Project"
 author: "Mundrugo Sunday James"
 date: today
 format:
   html:
     toc: true 
-execute: 
+execute:
   warning: false
+execute
+  
 editor: visual
 ---
 
@@ -65,11 +67,11 @@ ggplot(processed_data, aes(x = containment_type , y = ts)) +
 
 ```
 
-@fig-containment shows a bar graph of the containment types with their respective sludge characteristics 
+@fig-contain shows a bar graph of the containment types with their respective sludge characteristics 
 
 ```{r}
 #| fig-cap: Containment Types
-#| label: fig-containment
+#| label: fig-contain
 long_data <- processed_data %>%
   pivot_longer(cols = c(`Sludge Volume (ml/L)`, temperature, ammonium), 
                names_to = "Metric", 
@@ -119,11 +121,10 @@ processed_data |>
 
 
 ```
-
-# Conclusion
-
-
-
-
+# Conclusion 
+- The levels of ammonium was highest in lined latrines and followed by sptic tanks and last least in un lined latrines. this could be as a result of the long storage time in these facilites. over this time ongoing biological activities continously converts organic nitrogen into ammonium, leading to high accumulated levels.whereas the low concentrations of ammonium in unlinned pit latrines could be as a result of the leaching as waste water percolates through the soil. therefore their is need to place plans of actions for the treatment of influent from unlinned latrines so as to achieve optimal treatment at the treatment plant.
+- The mean ts in lined latrines was significantly higher (16.8) than in septic tanks (1.4) and unlinned latrines.
+- Therefore further investigations may be needed to explore these relationhips more comprehensively.
 
 # References 
+- Please see the bibiliography for  all refences used in this report.
