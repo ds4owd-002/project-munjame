@@ -7,7 +7,6 @@ format:
     toc: true 
 execute:
   warning: false
-execute
   
 editor: visual
 ---
