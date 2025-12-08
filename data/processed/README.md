@@ -3,15 +3,15 @@
 ## General information
 
 1.  Title of Dataset:  
-
+Influent Data For the Month of June 2025
 2.  Author Information
 
 **Author A**
 
-- First name:
-- Surname:
-- ORCID iD
-- Email:
+- First: Sunday James 
+- Surname: Mundrugo
+- ORCID iD: 0009-0004-1558-1466
+- Email: mundrugojms432@gmail.com
 
 **Author B**
 
@@ -22,12 +22,12 @@
 
 etc.
 
-3.  Date of data collection (single date, range, approximate date):
+3.  Date of data collection (single date, range, approximate date): June 2025
 
-4.  Geographic location of data collection:
+4.  Geographic location of data collection: Terego district, Uganda 
 
 5.  Information about funding sources that supported the collection of
-    the data: 
+    the data: N/A
 
 ## Sharing / access information
 
@@ -45,12 +45,12 @@ Recommended: This work is licensed under the Creative Commons Attribution 4.0 In
 
 ## Methodological information
 
-1.  Description of methods used for collection/generation of data:
+1.  Description of methods used for collection/generation of data: The dataset was obtained from Imvepi refugee settlement, where it was cleaned and processed to ensure it is analysis-ready. 
 
-2.  Methods for processing the data:
+2.  Methods for processing the data: Key methods involved filtering out missing values, renaming columns for clarity, and generating summary statistics.
 
 3.  Instrument- or software-specific information needed to interpret the
-    data: 
+    data: R  software in Posit cloud 
 
 4.  Standards and calibration information, if appropriate: -
 
