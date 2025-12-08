@@ -1,7 +1,12 @@
 ---
 title: "My Capstone Project"
 author: "Mundrugo Sunday James"
-format: html
+date: today
+format:
+  html:
+    toc: true 
+execute: 
+  warning: false
 editor: visual
 ---
 
@@ -9,23 +14,116 @@ editor: visual
 
 The goal of the project is to analyse the characteristics of faecal sludge received at the treatment plant from different sources for the month of april
 
-## Running Code
+## Methods 
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+For analysis we used the Influent received to the treatment plant for the month of June data set.where it was cleaned and processed to ensure that it is analysis ready. key methods involved filtering out missing values, renaming variables for clarity and generating summary statistics. 
 
 ```{r}
 library(tidyverse)
+library(here)
+library(knitr)
+library(dplyr)
+library(ggplot2)
+library(ggthemes)
+library(gt)
 ```
 
 ```{r}
-read_csv(here::here("data/raw/influent-data-2025.csv"))
+raw_data <- read_csv(here::here("data/raw/influent-data-2025.csv"))
 ```
 ```{r}
 processed_data <- raw_data |>
-  select(`Sample description`, `Total Solids (g/l or g/Kg)`, `Sludge Volume (ml/L)`, `Ammonium mg/l)`,`Temperature (oC)`, `COD mg/l)`) |>
+  select(`Sample description`, `Total Solids (g/l or g/Kg)`, `Sludge Volume (ml/L)`, `Ammonium mg/l)`, `Temperature (oC)`, `COD mg/l)`) |>
   filter(!is.na(`COD mg/l)`) & !is.na(`Total Solids (g/l or g/Kg)`) & !is.na(`Sludge Volume (ml/L)`) & !is.na(`Temperature (oC)`) & !is.na(`Ammonium mg/l)`)) |>
-  rename(influent_source = `Sample description`, ts = `Total Solids (g/l or g/Kg)`, ammonium = `Ammonium mg/l)`,temperature = `Temperature (oC)`, COD = `COD mg/l)` )
+  rename(influent_source = `Sample description`, 
+         ts = `Total Solids (g/l or g/Kg)`, 
+         ammonium = `Ammonium mg/l)`, 
+         temperature = `Temperature (oC)`, 
+         COD = `COD mg/l)`) |>
+  mutate(containment_type = case_when(
+       grepl("unlined", influent_source) ~ "unlined_latrine",
+       grepl("lined", tolower(influent_source)) ~ "lined_latrine",
+      grepl("septic", tolower(influent_source)) ~ "septic_tank",
+      TRUE ~ NA_character_  # Assign NA if no condition is met
+  ))
 
-write_csv(processed_data,
-          here::here("data/processed/processed_influent_data.csv"))
+write_csv(processed_data, here::here("data/processed/processed_influent_data.csv"))
 ```
+# Results
+@fig-containment_type is a scatter plott of the total solids by containment type. 
+```{r}
+#| fig-cap: Containment Type  and Total Solids 
+#| label: fig-containment_type
+
+
+ggplot(processed_data, aes(x = containment_type , y = ts)) +
+  geom_point(aes(color = containment_type, shape = containment_type)) +
+  labs(title = "Scatter Plot of Total Solids vs Containment Type",
+       x = "Containment Type",
+       y = "Total Solids (g/l )") +
+  theme_minimal()
+
+```
+
+@fig-containment shows a bar graph of the containment types with their respective sludge characteristics 
+
+```{r}
+#| fig-cap: Containment Types
+#| label: fig-containment
+long_data <- processed_data %>%
+  pivot_longer(cols = c(`Sludge Volume (ml/L)`, temperature, ammonium), 
+               names_to = "Metric", 
+               values_to = "Value")
+
+```
+```{r}
+
+
+ggplot(long_data, aes(x = containment_type, y = Value, fill = Metric)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  labs(title = "Bar Graph of Metrics by Containment Type",
+       x = "Containment Type",
+       y = "Value") +
+  theme_minimal()
+
+```
+
+@tbl-influent shows a summary of the influent sludge characteristics by containment type `
+```{r}
+#| label: tbl-influent
+#| tbl-cap: Influent Sludge Characteristics  by Containment Type.
+
+processed_data <- processed_data %>%
+  mutate(
+    ts = as.numeric(ts), 
+    COD = as.numeric(COD), 
+    ammonium = as.numeric(ammonium)
+  )
+```
+
+```{r}
+processed_data |> 
+  filter(!is.na(ts) & !is.na(COD) & !is.na(ammonium) ) |> 
+  group_by(containment_type) |>
+  summarise(n = n(),
+            mean_total_solids = mean(ts),
+    sd_total_solids = sd(ts),
+    mean_COD = mean(COD),
+    sd_COD = sd(COD),
+    mean_ammonium = mean(ammonium),
+    sd_ammonium = sd(ammonium)) |>
+  ungroup() |> 
+  gt() |> 
+  fmt_number(columns = c(mean_total_solids, sd_total_solids,mean_COD,sd_COD,mean_ammonium,sd_ammonium),
+             decimals = 1)
+
+
+```
+
+# Conclusion
+
+
+
+
+
+# References 
