@@ -1,23 +1,33 @@
- ---
+---
 title: "My Capstone Project"
-author: "Mundrugo Sunday James"
 date: today
+author:
+  name: "Mundrugo Sunday James"
+  orcid: 0009-0004-1558-1466
+  emai: mundrugojms432@gmail.com
+  affiliation:
+    name: ETH Zurich
+    url: https://ethz.ch/de.html.  
+license: "CC By"
+citation:
+   container-title: My Blog
 format:
   html:
-    toc: true 
-execute:
+    toc: true
+    code-fold: true 
+execute: 
+  echo: true
   warning: false
-  
-editor: visual
+bibliography: references.bib
 ---
 
 ## Project Description
 
-The goal of the project is to analyse the characteristics of faecal sludge received at the treatment plant from different sources for the month of april
+The goal of the project is to analyse the characteristics of faecal sludge (FS) received at the treatment plant from different sources for the month of June 2025
 
-## Methods 
+## Methods
 
-For analysis we used the Influent received to the treatment plant for the month of June data set.where it was cleaned and processed to ensure that it is analysis ready. key methods involved filtering out missing values, renaming variables for clarity and generating summary statistics. 
+For analysis we used the Influent received to the treatment plant for the month of June data set.where it was cleaned and processed to ensure that it is analysis ready. key methods involved filtering out missing values, renaming variables for clarity and generating summary statistics.
 
 ```{r}
 library(tidyverse)
@@ -32,6 +42,7 @@ library(gt)
 ```{r}
 raw_data <- read_csv(here::here("data/raw/influent-data-2025.csv"))
 ```
+
 ```{r}
 processed_data <- raw_data |>
   select(`Sample description`, `Total Solids (g/l or g/Kg)`, `Sludge Volume (ml/L)`, `Ammonium mg/l)`, `Temperature (oC)`, `COD mg/l)`) |>
@@ -50,8 +61,11 @@ processed_data <- raw_data |>
 
 write_csv(processed_data, here::here("data/processed/processed_influent_data.csv"))
 ```
+
 # Results
-@fig-containment_type is a scatter plott of the total solids by containment type. 
+
+@fig-containment_type is a scatter plott of the total solids by containment type.
+
 ```{r}
 #| fig-cap: Containment Type  and Total Solids 
 #| label: fig-containment_type
@@ -65,9 +79,7 @@ ggplot(processed_data, aes(x = containment_type , y = ts)) +
   theme_minimal()
 
 ```
-
-@fig-contain shows a bar graph of the containment types with their respective sludge characteristics 
-
+ @fig-contain shows a bar graph of the containment types with their respective sludge characteristics
 ```{r}
 #| fig-cap: Containment Types
 #| label: fig-contain
@@ -77,6 +89,7 @@ long_data <- processed_data %>%
                values_to = "Value")
 
 ```
+
 ```{r}
 
 
@@ -89,7 +102,12 @@ ggplot(long_data, aes(x = containment_type, y = Value, fill = Metric)) +
 
 ```
 
-@tbl-influent shows a summary of the influent sludge characteristics by containment type `
+ The levels of ammonium was highest in lined latrines and followed by sptic tanks and last least in un lined latrines. this could be as a result of the long storage time in these facilites. over this time ongoing biological activities continously converts organic nitrogen into ammonium, leading to high accumulated levels.whereas the low concentrations of ammonium in unlinned pit latrines could be as a result of the leaching as waste water percolates through the soil. therefore their is need to place plans of actions for the treatment of influent from unlinned latrines so as to achieve optimal treatment at the treatment plant.
+
+
+
+@tbl-influent shows a summary of the influent sludge characteristics by containment type \`
+
 ```{r}
 #| label: tbl-influent
 #| tbl-cap: Influent Sludge Characteristics  by Containment Type.
@@ -120,10 +138,21 @@ processed_data |>
 
 
 ```
-# Conclusion 
-- The levels of ammonium was highest in lined latrines and followed by sptic tanks and last least in un lined latrines. this could be as a result of the long storage time in these facilites. over this time ongoing biological activities continously converts organic nitrogen into ammonium, leading to high accumulated levels.whereas the low concentrations of ammonium in unlinned pit latrines could be as a result of the leaching as waste water percolates through the soil. therefore their is need to place plans of actions for the treatment of influent from unlinned latrines so as to achieve optimal treatment at the treatment plant.
-- The mean ts in lined latrines was significantly higher (16.8) than in septic tanks (1.4) and unlinned latrines.
-- Therefore further investigations may be needed to explore these relationhips more comprehensively.
+The mean ts in lined latrines was significantly higher (16.8) than in septic tanks (1.4) and unlinned latrines.
 
-# References 
-- Please see the bibiliography for  all refences used in this report.
+
+# Conclusion
+
+
+
+-   Therefore further investigations may be needed to explore these relationhips more comprehensively.
+
+# References
+
+-   Please see the bibiliography for all refences used in this report.
+
+[@ggplot2]
+
+[@ggthemes]
+
+[@gt-2]
