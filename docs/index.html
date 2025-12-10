@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mundrugo Sunday James">
-<meta name="dcterms.date" content="2025-12-09">
+<meta name="dcterms.date" content="2025-12-10">
 
 <title>My Capstone Project</title>
 <style>
@@ -83,15 +83,14 @@ div.csl-indent {
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
 <script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="index_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="index_files/libs/quarto-html/anchor.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-6a8e6d95bfcd174082ff54166b04dcf7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -142,7 +141,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 9, 2025</p>
+      <p class="date">December 10, 2025</p>
     </div>
   </div>
   
@@ -164,25 +163,25 @@ div.csl-indent {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>raw_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/raw/influent-data-2025.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>raw_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/raw/influent-data-2025.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>processed_data <span class="ot">&lt;-</span> raw_data <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>processed_data <span class="ot">&lt;-</span> raw_data <span class="sc">|&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">Sample description</span><span class="st">`</span>, <span class="st">`</span><span class="at">Total Solids (g/l or g/Kg)</span><span class="st">`</span>, <span class="st">`</span><span class="at">Sludge Volume (ml/L)</span><span class="st">`</span>, <span class="st">`</span><span class="at">Ammonium mg/l)</span><span class="st">`</span>, <span class="st">`</span><span class="at">Temperature (oC)</span><span class="st">`</span>, <span class="st">`</span><span class="at">COD mg/l)</span><span class="st">`</span>) <span class="sc">|&gt;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">COD mg/l)</span><span class="st">`</span>) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Total Solids (g/l or g/Kg)</span><span class="st">`</span>) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Sludge Volume (ml/L)</span><span class="st">`</span>) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Temperature (oC)</span><span class="st">`</span>) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Ammonium mg/l)</span><span class="st">`</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">influent_source =</span> <span class="st">`</span><span class="at">Sample description</span><span class="st">`</span>, </span>
@@ -197,7 +196,7 @@ div.csl-indent {
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span>  <span class="co"># Assign NA if no condition is met</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  ))</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(processed_data, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/processed/processed_influent_data.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(processed_data, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/processed/processed_influent_data.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -207,12 +206,12 @@ div.csl-indent {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(processed_data, <span class="fu">aes</span>(<span class="at">x =</span> containment_type , <span class="at">y =</span> ts)) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(processed_data, <span class="fu">aes</span>(<span class="at">x =</span> containment_type , <span class="at">y =</span> ts)) <span class="sc">+</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> containment_type, <span class="at">shape =</span> containment_type)) <span class="sc">+</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Scatter Plot of Total Solids vs Containment Type"</span>,</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Containment Type"</span>,</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Total Solids (g/l )"</span>) <span class="sc">+</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-containment_type" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -227,30 +226,35 @@ Figure&nbsp;1: Containment Type and Total Solids
 </div>
 </div>
 </div>
-<p><strong>?@fig-contain</strong> shows a bar graph of the containment types with their respective sludge characteristics</p>
+<p><a href="#fig-contain" class="quarto-xref">Figure&nbsp;2</a> shows a bar graph of the containment types with their respective sludge characteristics</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>long_data <span class="ot">&lt;-</span> processed_data <span class="sc">%&gt;%</span></span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>long_data <span class="ot">&lt;-</span> processed_data <span class="sc">%&gt;%</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">`</span><span class="at">Sludge Volume (ml/L)</span><span class="st">`</span>, temperature, ammonium), </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"Metric"</span>, </span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"Value"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"Value"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(long_data, <span class="fu">aes</span>(<span class="at">x =</span> containment_type, <span class="at">y =</span> Value, <span class="at">fill =</span> Metric)) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(long_data, <span class="fu">aes</span>(<span class="at">x =</span> containment_type, <span class="at">y =</span> Value, <span class="at">fill =</span> Metric)) <span class="sc">+</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>()) <span class="sc">+</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Bar Graph of Metrics by Containment Type"</span>,</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Containment Type"</span>,</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Value"</span>) <span class="sc">+</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<div id="fig-contain" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-contain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-contain-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-contain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Containment Types
+</figcaption>
 </figure>
 </div>
 </div>
@@ -265,12 +269,12 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
 <div aria-describedby="tbl-influent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>processed_data <span class="ot">&lt;-</span> processed_data <span class="sc">%&gt;%</span></span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>processed_data <span class="ot">&lt;-</span> processed_data <span class="sc">%&gt;%</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">ts =</span> <span class="fu">as.numeric</span>(ts), </span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">COD =</span> <span class="fu">as.numeric</span>(COD), </span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ammonium =</span> <span class="fu">as.numeric</span>(ammonium)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </figure>
@@ -278,7 +282,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>processed_data <span class="sc">|&gt;</span> </span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>processed_data <span class="sc">|&gt;</span> </span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ts) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(COD) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(ammonium) ) <span class="sc">|&gt;</span> </span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(containment_type) <span class="sc">|&gt;</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
@@ -291,26 +295,26 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(mean_total_solids, sd_total_solids,mean_COD,sd_COD,mean_ammonium,sd_ammonium),</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>             <span class="at">decimals =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>             <span class="at">decimals =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="mafkjqiwrz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mafkjqiwrz table {
+<div id="aboziqihij" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#aboziqihij table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mafkjqiwrz thead, #mafkjqiwrz tbody, #mafkjqiwrz tfoot, #mafkjqiwrz tr, #mafkjqiwrz td, #mafkjqiwrz th {
+#aboziqihij thead, #aboziqihij tbody, #aboziqihij tfoot, #aboziqihij tr, #aboziqihij td, #aboziqihij th {
   border-style: none;
 }
 
-#mafkjqiwrz p {
+#aboziqihij p {
   margin: 0;
   padding: 0;
 }
 
-#mafkjqiwrz .gt_table {
+#aboziqihij .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -336,12 +340,12 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-left-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_caption {
+#aboziqihij .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mafkjqiwrz .gt_title {
+#aboziqihij .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -353,7 +357,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-bottom-width: 0;
 }
 
-#mafkjqiwrz .gt_subtitle {
+#aboziqihij .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -365,7 +369,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-top-width: 0;
 }
 
-#mafkjqiwrz .gt_heading {
+#aboziqihij .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -377,13 +381,13 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-right-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_bottom_border {
+#aboziqihij .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_col_headings {
+#aboziqihij .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -398,7 +402,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-right-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_col_heading {
+#aboziqihij .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -418,7 +422,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   overflow-x: hidden;
 }
 
-#mafkjqiwrz .gt_column_spanner_outer {
+#aboziqihij .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -430,15 +434,15 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   padding-right: 4px;
 }
 
-#mafkjqiwrz .gt_column_spanner_outer:first-child {
+#aboziqihij .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mafkjqiwrz .gt_column_spanner_outer:last-child {
+#aboziqihij .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mafkjqiwrz .gt_column_spanner {
+#aboziqihij .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -450,11 +454,11 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   width: 100%;
 }
 
-#mafkjqiwrz .gt_spanner_row {
+#aboziqihij .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mafkjqiwrz .gt_group_heading {
+#aboziqihij .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -480,7 +484,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   text-align: left;
 }
 
-#mafkjqiwrz .gt_empty_group_heading {
+#aboziqihij .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -495,15 +499,15 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   vertical-align: middle;
 }
 
-#mafkjqiwrz .gt_from_md > :first-child {
+#aboziqihij .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mafkjqiwrz .gt_from_md > :last-child {
+#aboziqihij .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mafkjqiwrz .gt_row {
+#aboziqihij .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -522,7 +526,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   overflow-x: hidden;
 }
 
-#mafkjqiwrz .gt_stub {
+#aboziqihij .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -535,7 +539,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   padding-right: 5px;
 }
 
-#mafkjqiwrz .gt_stub_row_group {
+#aboziqihij .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -549,15 +553,15 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   vertical-align: top;
 }
 
-#mafkjqiwrz .gt_row_group_first td {
+#aboziqihij .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mafkjqiwrz .gt_row_group_first th {
+#aboziqihij .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mafkjqiwrz .gt_summary_row {
+#aboziqihij .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -567,16 +571,16 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   padding-right: 5px;
 }
 
-#mafkjqiwrz .gt_first_summary_row {
+#aboziqihij .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_first_summary_row.thick {
+#aboziqihij .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mafkjqiwrz .gt_last_summary_row {
+#aboziqihij .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -586,7 +590,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-bottom-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_grand_summary_row {
+#aboziqihij .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -596,7 +600,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   padding-right: 5px;
 }
 
-#mafkjqiwrz .gt_first_grand_summary_row {
+#aboziqihij .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -606,7 +610,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-top-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_last_grand_summary_row_top {
+#aboziqihij .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -616,11 +620,11 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-bottom-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_striped {
+#aboziqihij .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mafkjqiwrz .gt_table_body {
+#aboziqihij .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -629,7 +633,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-bottom-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_footnotes {
+#aboziqihij .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -643,7 +647,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-right-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_footnote {
+#aboziqihij .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -652,7 +656,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   padding-right: 5px;
 }
 
-#mafkjqiwrz .gt_sourcenotes {
+#aboziqihij .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -666,7 +670,7 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   border-right-color: #D3D3D3;
 }
 
-#mafkjqiwrz .gt_sourcenote {
+#aboziqihij .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -674,77 +678,77 @@ Table&nbsp;1: Influent Sludge Characteristics by Containment Type.
   padding-right: 5px;
 }
 
-#mafkjqiwrz .gt_left {
+#aboziqihij .gt_left {
   text-align: left;
 }
 
-#mafkjqiwrz .gt_center {
+#aboziqihij .gt_center {
   text-align: center;
 }
 
-#mafkjqiwrz .gt_right {
+#aboziqihij .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mafkjqiwrz .gt_font_normal {
+#aboziqihij .gt_font_normal {
   font-weight: normal;
 }
 
-#mafkjqiwrz .gt_font_bold {
+#aboziqihij .gt_font_bold {
   font-weight: bold;
 }
 
-#mafkjqiwrz .gt_font_italic {
+#aboziqihij .gt_font_italic {
   font-style: italic;
 }
 
-#mafkjqiwrz .gt_super {
+#aboziqihij .gt_super {
   font-size: 65%;
 }
 
-#mafkjqiwrz .gt_footnote_marks {
+#aboziqihij .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mafkjqiwrz .gt_asterisk {
+#aboziqihij .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mafkjqiwrz .gt_indent_1 {
+#aboziqihij .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mafkjqiwrz .gt_indent_2 {
+#aboziqihij .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mafkjqiwrz .gt_indent_3 {
+#aboziqihij .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mafkjqiwrz .gt_indent_4 {
+#aboziqihij .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mafkjqiwrz .gt_indent_5 {
+#aboziqihij .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mafkjqiwrz .katex-display {
+#aboziqihij .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mafkjqiwrz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#aboziqihij div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="gt_col_headings header">
 <th id="containment_type" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">containment_type</th>
@@ -826,12 +830,12 @@ Wickham, Hadley. 2016. <span>“Ggplot2: Elegant Graphics for Data Analysis.”<
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{sunday_james2025,
   author = {Sunday James, Mundrugo},
   title = {My {Capstone} {Project}},
-  date = {2025-12-09},
+  date = {2025-12-10},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-sunday_james2025" class="csl-entry quarto-appendix-citeas" role="listitem">
 Sunday James, Mundrugo. 2025. <span>“My Capstone Project.”</span> My
-Blog. December 9, 2025.
+Blog. December 10, 2025.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -885,14 +889,13 @@ Blog. December 9, 2025.
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

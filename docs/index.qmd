@@ -79,10 +79,10 @@ ggplot(processed_data, aes(x = containment_type , y = ts)) +
   theme_minimal()
 
 ```
- @fig-contain shows a bar graph of the containment types with their respective sludge characteristics
+
+@fig-contain shows a bar graph of the containment types with their respective sludge characteristics
+
 ```{r}
-#| fig-cap: Containment Types
-#| label: fig-contain
 long_data <- processed_data %>%
   pivot_longer(cols = c(`Sludge Volume (ml/L)`, temperature, ammonium), 
                names_to = "Metric", 
@@ -91,7 +91,8 @@ long_data <- processed_data %>%
 ```
 
 ```{r}
-
+#| fig-cap: Containment Types
+#| label: fig-contain
 
 ggplot(long_data, aes(x = containment_type, y = Value, fill = Metric)) +
   geom_bar(stat = "identity", position = position_dodge()) +
@@ -102,9 +103,7 @@ ggplot(long_data, aes(x = containment_type, y = Value, fill = Metric)) +
 
 ```
 
- The levels of ammonium was highest in lined latrines and followed by sptic tanks and last least in un lined latrines. this could be as a result of the long storage time in these facilites. over this time ongoing biological activities continously converts organic nitrogen into ammonium, leading to high accumulated levels.whereas the low concentrations of ammonium in unlinned pit latrines could be as a result of the leaching as waste water percolates through the soil. therefore their is need to place plans of actions for the treatment of influent from unlinned latrines so as to achieve optimal treatment at the treatment plant.
-
-
+The levels of ammonium was highest in lined latrines and followed by sptic tanks and last least in un lined latrines. this could be as a result of the long storage time in these facilites. over this time ongoing biological activities continously converts organic nitrogen into ammonium, leading to high accumulated levels.whereas the low concentrations of ammonium in unlinned pit latrines could be as a result of the leaching as waste water percolates through the soil. therefore their is need to place plans of actions for the treatment of influent from unlinned latrines so as to achieve optimal treatment at the treatment plant.
 
 @tbl-influent shows a summary of the influent sludge characteristics by containment type \`
 
@@ -138,12 +137,10 @@ processed_data |>
 
 
 ```
+
 The mean ts in lined latrines was significantly higher (16.8) than in septic tanks (1.4) and unlinned latrines.
 
-
 # Conclusion
-
-
 
 -   Therefore further investigations may be needed to explore these relationships more comprehensively.
 
